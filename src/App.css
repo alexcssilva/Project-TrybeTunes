@@ -3,12 +3,20 @@
   padding: 0;
 }
 
+#root, div {
+  height: 100vh;
+}
 
 .login-content {
-  display: flex;
-  align-items: center;
   align-content: center;
-  background-color: red;
-  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
   padding: 50px;
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 10vh;
 }
