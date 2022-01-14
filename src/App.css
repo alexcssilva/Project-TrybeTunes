@@ -3,7 +3,7 @@
   padding: 0;
 }
 
-#root, div {
+div {
   height: 100vh;
 }
 
@@ -17,6 +17,6 @@
 }
 
 h2 {
-  text-align: center;
   margin-top: 10vh;
+  text-align: center;
 }
