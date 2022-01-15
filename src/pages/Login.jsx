@@ -2,6 +2,7 @@ import React from 'react';
 import { Redirect } from 'react-router-dom/cjs/react-router-dom.min';
 import Loading from '../components/Loading';
 import { createUser } from '../services/userAPI';
+import Img from '../images/LOGO_POSITIVA_1.png';
 
 class Login extends React.Component {
   constructor() {
@@ -45,28 +46,33 @@ class Login extends React.Component {
     return (
       <div data-testid="page-login">
         {(loading) ? (<Loading />) : ''}
-        <form className="login-content">
-          <label htmlFor="ogin-name-input">
-            <input
-              placeholder="Nome"
-              data-testid="login-name-input"
-              type="text"
-              name="name"
-              value={ name }
-              id="ogin-name-input"
-              onChange={ this.handleChance }
-            />
-          </label>
-          <button
-            data-testid="login-submit-button"
-            type="submit"
-            disabled={ disabledButton }
-            onClick={ this.handleClick }
-            loading
-          >
-            Entrar
-          </button>
-          {(login) ? <Redirect to="/search" /> : ''}
+        <form>
+          <img className="trybe-tunes-logo" src={ Img } alt="trybe-tunes-logo" />
+          <section>
+            <label htmlFor="login-name-input">
+              <input
+                className="login-name-input"
+                placeholder="Nome"
+                data-testid="login-name-input"
+                type="text"
+                name="name"
+                value={ name }
+                id="ogin-name-input"
+                onChange={ this.handleChance }
+              />
+            </label>
+            <button
+              className="login-button"
+              data-testid="login-submit-button"
+              type="submit"
+              disabled={ disabledButton }
+              onClick={ this.handleClick }
+              loading
+            >
+              <p className="login-button-inside">Entrar</p>
+            </button>
+            {(login) ? <Redirect to="/search" /> : ''}
+          </section>
         </form>
       </div>
     );

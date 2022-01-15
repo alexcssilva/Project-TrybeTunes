@@ -3,20 +3,60 @@
   padding: 0;
 }
 
-div {
-  height: 100vh;
+.login {
+  background: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  height: 314px;
+  left: 372px;
+  position: absolute;
+  top: 431px;
+  width: 697px;
 }
 
-.login-content {
-  align-content: center;
-  align-items: center;
+.login-name-input{
+  align-items: flex-start;
+  background: #FFFFFF;
+  border-radius: 0px;
+  border: 1px solid #E1E5EB;
   display: flex;
-  justify-content: center;
-  padding: 50px;
-  text-align: center;
+  flex-direction: column;
+  height: 45px;
+  left: 454px;
+  padding: 12px 16px;
+  position: relative;
+  top: 525px;
+  width: 519px;
 }
 
-h2 {
-  margin-top: 10vh;
-  text-align: center;
+.login-button {
+  align-items: center;
+  background: #003BE5;
+  border-radius: 2px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: row;
+  height: 40px;
+  justify-content: center;
+  left: 454px;
+  padding: 8px 32px;
+  position: absolute;
+  top: 601px;
+  width: 519px;
+}
+
+/* .login-button-inside {
+  color: #FFFFFF;
+  flex-grow: 0;
+  flex: none;
+  margin: 0px 10px;
+  order: 0;
+} */
+
+.trybe-tunes-logo {
+  height: 158px;
+  left: 604px;
+  position: absolute;
+  top: 169px;
+  width: 208px;
 }
