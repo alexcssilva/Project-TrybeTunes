@@ -27,25 +27,33 @@ class Header extends React.Component {
               <header data-testid="header-component">
                 <h3 data-testid="header-user-name">{`${name.name}`}</h3>
               </header>
-              <nav>
-                <Link
-                  to="/search"
-                  data-testid="link-to-search"
-                >
-                  Search
-                </Link>
-                <Link
-                  to="/favorites"
-                  data-testid="link-to-favorites"
-                >
-                  Favorites
-                </Link>
-                <Link
-                  to="/profile"
-                  data-testid="link-to-profile"
-                >
-                  Profile
-                </Link>
+              <nav className="nav-list">
+                <ul>
+                  <li className="nav-item">
+                    <Link
+                      to="/search"
+                      data-testid="link-to-search"
+                    >
+                      Search
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/favorites"
+                      data-testid="link-to-favorites"
+                    >
+                      Favorites
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/profile"
+                      data-testid="link-to-profile"
+                    >
+                      Profile
+                    </Link>
+                  </li>
+                </ul>
               </nav>
             </div>
           )}
