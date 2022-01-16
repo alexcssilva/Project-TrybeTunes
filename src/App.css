@@ -80,15 +80,15 @@ header {
 }
 
 .nav-list ul {
-  display: flex;
-  justify-content: space-evenly;
   align-items: center;
-  text-align: center;
   background: #f0f2f5;
   bottom: 0%;
+  display: flex;
+  justify-content: space-evenly;
   left: 0%;
   position: absolute;
   right: 0%;
+  text-align: center;
   top: 0%;
   width: 100%;
 }
@@ -104,7 +104,6 @@ header {
   background: #f0f2f5;
   box-shadow: 2px black;
   color: #2fc18c;
-  font-family: Epilogue;
   font-size: 28px;
   font-style: normal;
   font-weight: 900;
@@ -119,5 +118,5 @@ header {
 
 .nav-list li a:hover {
   background: #036b52;
-  color: #f0F2f5;
+  color: #f0f2f5;
 }
