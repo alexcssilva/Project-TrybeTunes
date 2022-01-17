@@ -112,3 +112,4 @@ class Search extends React.Component {
 }
 
 export default Search;
+// Requisito 6 auxiliado pelo o colega William Alves - Turma 17
