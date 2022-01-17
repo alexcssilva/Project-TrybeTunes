@@ -25,7 +25,14 @@ class Header extends React.Component {
           ) : (
             <div>
               <header data-testid="header-component">
-                <h3 data-testid="header-user-name">{`${name.name}`}</h3>
+                <div className="header-user-content">
+                  <h3
+                    className="header-name"
+                    data-testid="header-user-name"
+                  >
+                    {`${name.name}`}
+                  </h3>
+                </div>
               </header>
               <nav className="nav-list">
                 <ul>

@@ -13,7 +13,7 @@ describe('6 - Faça a requisição para pesquisar artistas', () => {
   
   afterEach(() => localStorage.clear());
 
-  it('Será validado se ao clicar em pesquisar, a requisição é feita usando a searchAlbumsAPI',
+   it('Será validado se ao clicar em pesquisar, a requisição é feita usando a searchAlbumsAPI',
     async () => {
       const spy = jest.spyOn(searchAlbumsAPI, 'default').mockImplementation(
         () => Promise.resolve([]),
