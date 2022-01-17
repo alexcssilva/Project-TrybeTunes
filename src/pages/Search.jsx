@@ -93,9 +93,17 @@ class Search extends React.Component {
                         to={ `/album/${artist.collectionId}` }
                         data-testid={ `link-to-album-${artist.collectionId}` }
                       >
-                        <img src={ artist.artworkUrl100 } alt={ artist.collectionName } />
-                        <h5>{ artist.collectionName }</h5>
-                        <h3>{ artist.artistName }</h3>
+                        <div className="album">
+                          <img
+                            className="image-album"
+                            src={ artist.artworkUrl100 }
+                            alt={ artist.collectionName }
+                          />
+                          <div className="name-album">
+                            <h5>{ artist.collectionName }</h5>
+                            <h3>{ artist.artistName }</h3>
+                          </div>
+                        </div>
                       </Link>
                     </div>
                   ))}

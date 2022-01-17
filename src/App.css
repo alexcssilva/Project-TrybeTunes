@@ -211,3 +211,102 @@ h3 {
   top: 434px;
   width: 447px;
 }
+
+.album {
+  align-items: flex-start;
+  background: white;
+  border-radius: 6px;
+  border: 1px solid #e1e5eb;
+  box-shadow: 1px 2px rgba(0, 0, 0, 0.06), 0px 1px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  height: 320px;
+  left: 427px;
+  padding: 16px;
+  position: relative;
+  top: 507px;
+  width: 290px;
+}
+
+.image-album {
+  border-radius: 6px 6px 0px 0px;
+  height: 180px;
+  left: calc(50% - 290px/2);
+  top: calc(50% - 180px/2 - 70px);
+  width: 290px;
+}
+
+.name-album {
+  align-items: flex-start;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 0;
+  flex: none;
+  height: 108px;
+  left: 0px;
+  margin: 16px 0px;
+  order: 1;
+  padding: 6px;
+  position: static;
+  top: 196px;
+  width: 290px;
+}
+
+.album-image {
+  border-radius: 6px;
+  height: 290px;
+  left: 179px;
+  position: absolute;
+  top: 332px;
+  width: 290px;
+}
+
+.name-album {
+  color: #023031;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: bold;
+  height: 36px;
+  left: 170px;
+  line-height: 37px;
+  position: absolute;
+  top: 635px;
+  width: 330px;
+}
+
+.name-artist {
+  color: #023031;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  height: 36px;
+  left: 176px;
+  line-height: 25px;
+  position: absolute;
+  top: 704px;
+  width: 255px;
+}
+
+.track-name {
+  color: #001813;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: normal;
+  height: 33px;
+  left: 589px;
+  line-height: 23px;
+  position: absolute;
+  top: 356px;
+  width: 110px;
+}
+
+.track-preview {
+  background: #F0F2F5;
+  border-radius: 50px;
+  height: 66px;
+  left: 716px;
+  position: absolute;
+  top: 333px;
+  width: 438px;
+}
