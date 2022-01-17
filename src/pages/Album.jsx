@@ -35,7 +35,7 @@ class Album extends React.Component {
                 alt={ musicList[0].collectionName }
               />
               <h5
-                className="name-album"
+                className="name-collection"
                 data-testid="album-name"
               >
                 { musicList[0].collectionName }

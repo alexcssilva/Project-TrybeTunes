@@ -6,7 +6,9 @@ class MusicCard extends React.Component {
     const { music } = this.props;
     return (
       <div>
-        <h4 className="track-name-music">{ music.trackName }</h4>
+        <p
+          className="track-name-music"
+        />
         <audio
           className="track-preview"
           data-testid="audio-component"

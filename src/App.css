@@ -215,9 +215,9 @@ h3 {
 .album {
   align-items: flex-start;
   background: white;
-  border-radius: 6px;
   border: 1px solid #e1e5eb;
-  box-shadow: 1px 2px rgba(0, 0, 0, 0.06), 0px 1px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  box-shadow: 1px 2px rgba(0, 0, 0, 0.06) , 0px 1px 3px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   height: 320px;
@@ -241,11 +241,9 @@ h3 {
   align-self: stretch;
   display: flex;
   flex-direction: column;
-  flex-grow: 0;
   flex: none;
   height: 108px;
-  left: 0px;
-  margin: 16px 0px;
+  margin: 16px;
   order: 1;
   padding: 6px;
   position: static;
@@ -262,11 +260,11 @@ h3 {
   width: 290px;
 }
 
-.name-album {
+.name-collection {
   color: #023031;
   font-size: 36px;
   font-style: normal;
-  font-weight: bold;
+  font-weight: 900;
   height: 36px;
   left: 170px;
   line-height: 37px;
@@ -292,7 +290,7 @@ h3 {
   color: #001813;
   font-size: 22px;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 300;
   height: 33px;
   left: 589px;
   line-height: 23px;
@@ -302,7 +300,7 @@ h3 {
 }
 
 .track-preview {
-  background: #F0F2F5;
+  background: #f0f2f5;
   border-radius: 50px;
   height: 66px;
   left: 716px;
