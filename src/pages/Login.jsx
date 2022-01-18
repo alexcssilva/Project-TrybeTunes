@@ -28,17 +28,17 @@ class Login extends React.Component {
     });
   }
 
-  handleClick = async (event) => {
+  handleClick = (event) => {
     event.preventDefault();
     const { name } = this.state;
     this.setState({
       loading: true,
     });
-    await createUser({ name });
-    this.setState({
-      loading: true,
-      login: true,
-    });
+    createUser(name)
+      .then(() => this.setState({
+        loading: true,
+        login: true,
+      }));
   }
 
   render() {

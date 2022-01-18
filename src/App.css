@@ -266,10 +266,10 @@ h3 {
   font-style: normal;
   font-weight: 900;
   height: 36px;
-  left: 170px;
+  left: 175px;
   line-height: 37px;
   position: absolute;
-  top: 635px;
+  top: 650px;
   width: 330px;
 }
 
@@ -304,7 +304,13 @@ h3 {
   border-radius: 50px;
   height: 66px;
   left: 716px;
-  position: absolute;
   top: 333px;
   width: 438px;
+}
+
+.input-favorite {
+  height: 25px;
+  left: 1192px;
+  top: 353px;
+  width: 25px;
 }
