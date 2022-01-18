@@ -1,43 +1,62 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { addSong } from '../services/favoriteSongsAPI';
+import { addSong, removeSong, getFavoriteSongs } from '../services/favoriteSongsAPI';
 import Loading from './Loading';
 
 class MusicCard extends React.Component {
   constructor() {
     super();
     this.state = {
-      inputFavorite: false,
+      checked: false,
       loading: false,
+      favoriteSong: [],
     };
   }
 
-  handleChange = (event) => {
-    const { type, name, value, checked } = event.target;
-    const songType = type === 'checkbox' ? checked : value;
-    this.setState({
-      loading: true,
-      [name]: songType,
-    });
-    this.HandleApi().then(() => {
+  componentDidMount() {
+    getFavoriteSongs().then((favorite) => {
       this.setState({
-        loading: false,
-      });
+        favoriteSong: favorite,
+      }, this.favoriteChange);
     });
   }
 
-  HandleApi = async () => {
-    const {
-      trackId,
-      trackName,
-      previewUrl,
-    } = this.props;
-    await addSong({ trackId, trackName, previewUrl });
+  favoriteChange = () => {
+    const { music } = this.props;
+    const { favoriteSong } = this.state;
+    const favoriteTrue = favoriteSong.some((equal) => equal.trackId === music.trackId);
+    if (favoriteTrue) {
+      this.setState({
+        checked: favoriteTrue,
+      });
+    }
+  }
+
+  handleChange = (event) => {
+    const { checked } = event.target;
+    this.setState({
+      loading: true,
+      checked,
+    }, this.HandleApi);
+  }
+
+  HandleApi = () => {
+    const { music } = this.props;
+    const { checked } = this.state;
+    if (checked) {
+      addSong(music).then(() => {
+        this.setState({
+          loading: false,
+        });
+      });
+    } else {
+      removeSong(music);
+    }
   }
 
   render() {
     const { music } = this.props;
-    const { inputFavorite, loading } = this.state;
+    const { checked, loading } = this.state;
     return (
       <div>
         <p
@@ -66,8 +85,8 @@ class MusicCard extends React.Component {
             data-testid={ `checkbox-music-${music.trackId}` }
             type="checkbox"
             name="inputFavorite"
-            value={ inputFavorite }
-            onClick={ this.handleChange }
+            checked={ checked }
+            onChange={ this.handleChange }
           />
         </label>
       </div>
@@ -83,3 +102,4 @@ MusicCard.propTypes = {
 
 export default MusicCard;
 // Desafio 7 Auxiliado pelo o colega Jonatas Lima - Turma 17
+// Desafio 9 e 10 auxliado pelo os colegas William Alves e Jonatas Lima - turma 17
