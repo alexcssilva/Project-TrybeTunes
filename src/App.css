@@ -229,7 +229,7 @@ h3 {
 }
 
 .image-album {
-  border-radius: 6px 6px;
+  border-radius: 6px;
   height: 180px;
   left: calc(50% - 290px / 2);
   top: calc(50% - 180px / 2 - 70px);
